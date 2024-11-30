@@ -18,8 +18,8 @@ void calendar(int year) {
         }
     }
     vector<int> plusArrOthers;
-    for (int i = 0; i < 650; i++) {
-        if (i % 4 == 0) {
+    for (int i = 1; i < 651; i++) {
+        if (i % 4 == 0 and i != 0) {
             plusArrOthers.push_back(2);
         }
         else {
@@ -27,7 +27,7 @@ void calendar(int year) {
         }
     }
     vector<int> minusArrJF;
-    for (int i = 1; i < 650; i++) {
+    for (int i = 1; i < 651; i++) {
         if (i % 4 == 0) {
             minusArrJF.push_back(5);
         }
@@ -222,9 +222,9 @@ void calendar(int year) {
 int main()
 {
     int year;
-    cout << "Введите год в диапазоне (1910-2050)" << endl;
+    cout << "Введите год в диапазоне (1910-2099)" << endl;
     cin >> year;
-    if (year > 1910 and year < 2050) {
+    if (year > 1909 and year < 2100) {
         calendar(year);
     }
     else {
